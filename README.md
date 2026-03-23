@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="favicon.png" alt="Lethal Labs Logo" width="120">
+</div>
+
 # Lethal Labs Workspace
 
 This repository contains the core website and documentation for **Lethal Labs**, an elite software firm developing premium SaaS solutions and maintaining open-source tools.
