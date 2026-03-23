@@ -1,0 +1,303 @@
+/*
+  Lethal Labs - Base Styles
+  Apple-inspired Design System (Premium Dark Mode)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --bg-color: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-glass: rgba(20, 20, 20, 0.7);
+  --text-primary: #f5f5f7;
+  --text-secondary: #86868b;
+  --accent-color: #2997ff;
+  --accent-hover: #0071e3;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --card-bg: #1d1d1f;
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Spacing */
+  --nav-height: 48px;
+  --section-padding: 100px 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.nav-content {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-brand {
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  padding-top: var(--nav-height);
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+  background: linear-gradient(180deg, #fff, #86868b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent-hover);
+  color: #fff;
+  transform: scale(1.02);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(41, 151, 255, 0.1);
+  color: var(--accent-color);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--section-padding);
+}
+
+/* Sections */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: -0.02em;
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg-secondary);
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: var(--text-secondary);
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: var(--text-primary);
+}
+
+/* Cards (for projects) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.card p {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  max-height: 200px;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+/* Address Box */
+.address-box {
+  background-color: var(--card-bg);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.address-box code {
+  color: var(--accent-color);
+  font-family: monospace;
+  font-size: 1.1rem;
+  word-break: break-all;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 3rem; }
+  .hero p { font-size: 1.2rem; }
+  .nav-links { display: none; } /* Could implement a hamburger menu here later */
+}
