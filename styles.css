@@ -295,9 +295,53 @@ footer a:hover {
   word-break: break-all;
 }
 
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 5px;
+}
+
 /* Responsiveness */
 @media (max-width: 768px) {
-  .hero h1 { font-size: 3rem; }
-  .hero p { font-size: 1.2rem; }
-  .nav-links { display: none; } /* Could implement a hamburger menu here later */
+  .hero h1 { font-size: 2.5rem; }
+  .hero p { font-size: 1.1rem; }
+  
+  .mobile-menu-btn { display: block; }
+  
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background: var(--bg-secondary);
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .nav-links.active { display: flex; }
+  
+  .grid { grid-template-columns: 1fr !important; gap: 30px !important; }
+  
+  .container { padding: 60px 20px; }
+  
+  /* Fix sticky sidebar in docs.html for mobile */
+  aside {
+    position: static !important;
+    margin-bottom: 30px;
+    width: 100% !important;
+    min-width: unset !important;
+  }
+  
+  /* Flex wrap fix for docs.html */
+  div[style*="display: flex; gap: 40px;"] {
+    flex-direction: column;
+    gap: 20px !important;
+  }
 }
