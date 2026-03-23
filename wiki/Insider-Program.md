@@ -25,13 +25,13 @@ Consistent contributors are granted triage rights. At this phase, your responsib
 - Participating in architectural design systems (RFCs).
 
 ### Phase 3: The Offer
-Once a consensus is formed by the current Insider board, you will receive an invitation email from `insiders@lethallabs.io`. Accepting this invite provisions you with internal access tokens, VPN credentials, and full Slack access.
+Once a consensus is formed by the current Insider board, you will receive an invitation email from `dramrxt@proton.me`. Accepting this invite provisions you with internal access tokens, VPN credentials, and full Slack access.
 
 ## ⭐ Fast Track for Veterans
 
 If you are already an established open-source maintainer or a senior systems architect elsewhere, you do not need to grind through Phase 1. 
 
-Send an email to `insiders@lethallabs.io` with:
+Send an email to `dramrxt@proton.me` with:
 1. Links to repositories you've architected or maintain.
 2. A brief summary of your expertise (e.g., distributed systems, WebGL rendering, lock-free data structures). 
 3. We will respond with a specialized, paid, 48-hour take-home architectural challenge.
