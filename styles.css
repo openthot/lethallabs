@@ -306,7 +306,7 @@ footer a:hover {
 }
 
 /* Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .hero h1 { font-size: 2.5rem; }
   .hero p { font-size: 1.1rem; }
   
