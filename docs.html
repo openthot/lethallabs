@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lethal Labs | Docs & Insiders</title>
-  <meta name="description" content="Official documentation on the inner workings of Lethal Labs and the Insider application process.">
+  <meta name="description"
+    content="Official documentation on the inner workings of Lethal Labs and the Insider application process.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <nav>
     <div class="nav-content">
-      <div class="nav-brand"><a href="index.html" style="color: white; opacity: 1; display: flex; align-items: center; gap: 8px;"><img src="favicon.png" alt="Logo" style="width: 20px; height: 20px; object-fit: contain;">Lethal Labs</a></div>
+      <div class="nav-brand"><a href="index.html"
+          style="color: white; opacity: 1; display: flex; align-items: center; gap: 8px;"><img src="favicon.png"
+            alt="Logo" style="width: 20px; height: 20px; object-fit: contain;">Lethal Labs</a></div>
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -22,7 +27,7 @@
       </div>
     </div>
   </nav>
-  
+
   <main>
     <section class="hero fade-in" style="min-height: 40vh; padding-bottom: 0;">
       <h1>Documentation.</h1>
@@ -31,59 +36,84 @@
 
     <section class="container fade-in" style="animation-delay: 0.2s;">
       <div style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
-        
+
         <!-- Sidebar Navigation (Mock) -->
-        <aside style="flex: 1; min-width: 250px; background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid var(--border-color); position: sticky; top: 100px;">
-           <h3 style="margin-bottom: 20px; font-size: 1.1rem; color: var(--text-primary);">Table of Contents</h3>
-           <ul style="list-style: none; padding: 0;">
-             <li style="margin-bottom: 12px;"><a href="#operating-model" style="color: var(--accent-color); font-weight: 500;">Our Operating Model</a></li>
-             <li style="margin-bottom: 12px;"><a href="#insider-program" style="color: var(--text-secondary);">The Insider Program</a></li>
-             <li style="margin-bottom: 12px;"><a href="#architecture-guidelines" style="color: var(--text-secondary);">Architecture & Standards</a></li>
-             <li style="margin-bottom: 12px;"><a href="https://github.com/lethallabs" style="color: var(--text-secondary);">GitHub Wiki ↗</a></li>
-           </ul>
+        <aside
+          style="flex: 1; min-width: 250px; background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid var(--border-color); position: sticky; top: 100px;">
+          <h3 style="margin-bottom: 20px; font-size: 1.1rem; color: var(--text-primary);">Table of Contents</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 12px;"><a href="#operating-model"
+                style="color: var(--accent-color); font-weight: 500;">Our Operating Model</a></li>
+            <li style="margin-bottom: 12px;"><a href="#insider-program" style="color: var(--text-secondary);">The
+                Insider Program</a></li>
+            <li style="margin-bottom: 12px;"><a href="#architecture-guidelines"
+                style="color: var(--text-secondary);">Architecture & Standards</a></li>
+            <li style="margin-bottom: 12px;"><a href="https://github.com/openthot/lethallabs/wiki"
+                style="color: var(--text-secondary);">GitHub Wiki ↗</a></li>
+          </ul>
         </aside>
 
         <!-- Main Content area -->
         <div style="flex: 3; min-width: 300px; color: var(--text-secondary); line-height: 1.8;">
-           
-           <h2 id="operating-model" style="color: var(--text-primary); margin-bottom: 20px; font-size: 2.2rem; font-weight: 600;">How We Work</h2>
-           <p style="margin-bottom: 20px;">
-             Lethal Labs operates as a distributed, highly autonomous, asynchronous firm. We do not track hours. We do not micromanage. We measure output via git commits and deployed features. 
-           </p>
-           <p style="margin-bottom: 40px;">
-             Our primary focus is divided into two areas: sustaining our proprietary SaaS products (which generates capital) and continuously donating high-performance primitives to the open-source community as public goods. 
-           </p>
 
-           <h2 id="insider-program" style="color: var(--text-primary); margin-bottom: 20px; font-size: 2.2rem; font-weight: 600;">How To Become an "Insider"</h2>
-           <p style="margin-bottom: 20px;">
-             "Insiders" are the core maintainers and staff engineers forming the backbone of Lethal Labs. We rarely hire through traditional interviews. Instead, we use an open, meritocratic approach.
-           </p>
-           <ol style="margin-left: 20px; margin-bottom: 40px;">
-             <li style="margin-bottom: 15px;">
-               <strong style="color: var(--text-primary);">Phase 1: Contribute (Open Source).</strong> Find one of our public repositories on GitHub. Fix a bug, optimize an algorithm, or submit an RFC for a feature. Prove your capability through PRs.
-             </li>
-             <li style="margin-bottom: 15px;">
-               <strong style="color: var(--text-primary);">Phase 2: Establish Context.</strong> After consistent high-quality contributions, current Insiders will grant you triage permissions. Engage in code reviews architecture discussions.
-             </li>
-             <li style="margin-bottom: 15px;">
-               <strong style="color: var(--text-primary);">Phase 3: The Invitation.</strong> Once consensus is reached among the core team, you will receive a formal invite to join Lethal Labs, granting access to private SaaS repos and corresponding compensation.
-             </li>
-           </ol>
+          <h2 id="operating-model"
+            style="color: var(--text-primary); margin-bottom: 20px; font-size: 2.2rem; font-weight: 600;">How We Work
+          </h2>
+          <p style="margin-bottom: 20px;">
+            Lethal Labs operates as a distributed, highly autonomous, asynchronous firm. We do not track hours. We do
+            not micromanage. We measure output via git commits and deployed features.
+          </p>
+          <p style="margin-bottom: 40px;">
+            Our primary focus is divided into two areas: sustaining our proprietary SaaS products (which generates
+            capital) and continuously donating high-performance primitives to the open-source community as public goods.
+          </p>
 
-           <div style="background: rgba(41, 151, 255, 0.1); padding: 25px; border-radius: 12px; border-left: 4px solid var(--accent-color);">
-             <h4 style="color: var(--text-primary); margin-bottom: 10px;">Already an established engineer?</h4>
-             <p style="font-size: 0.95rem;">If you have a strong portfolio or a track record in system architecture, you may bypass Phase 1. Request an immediate technical assessment by emailing <a href="mailto:dramrxt@proton.me" style="color: var(--accent-color);">dramrxt@proton.me</a> with a link to your GitHub profile.</p>
-           </div>
-           
-           <h2 id="architecture-guidelines" style="color: var(--text-primary); margin-bottom: 20px; font-size: 2.2rem; font-weight: 600; margin-top: 50px;">Architecture & Standards</h2>
-           <p style="margin-bottom: 20px;">
-             Before submitting PRs, ensure you have read our core engineering guidelines available in our GitHub repository Wiki. The wiki covers:
-           </p>
-           <ul style="margin-left: 20px; margin-bottom: 40px;">
-             <li>Performance benchmarks and latency upper-bounds for new features.</li>
-             <li>Strict linting and styling (Prettier/ESLint configs for JS/TS; Rustfmt for Rust).</li>
-             <li>Design system primitives and CSS variable naming conventions.</li>
-           </ul>
+          <h2 id="insider-program"
+            style="color: var(--text-primary); margin-bottom: 20px; font-size: 2.2rem; font-weight: 600;">How To Become
+            an "Insider"</h2>
+          <p style="margin-bottom: 20px;">
+            "Insiders" are the core maintainers and staff engineers forming the backbone of Lethal Labs. We rarely hire
+            through traditional interviews. Instead, we use an open, meritocratic approach.
+          </p>
+          <ol style="margin-left: 20px; margin-bottom: 40px;">
+            <li style="margin-bottom: 15px;">
+              <strong style="color: var(--text-primary);">Phase 1: Contribute (Open Source).</strong> Find one of our
+              public repositories on GitHub. Fix a bug, optimize an algorithm, or submit an RFC for a feature. Prove
+              your capability through PRs.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong style="color: var(--text-primary);">Phase 2: Establish Context.</strong> After consistent
+              high-quality contributions, current Insiders will grant you triage permissions. Engage in code reviews
+              architecture discussions.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong style="color: var(--text-primary);">Phase 3: The Invitation.</strong> Once consensus is reached
+              among the core team, you will receive a formal invite to join Lethal Labs, granting access to private SaaS
+              repos and corresponding compensation.
+            </li>
+          </ol>
+
+          <div
+            style="background: rgba(41, 151, 255, 0.1); padding: 25px; border-radius: 12px; border-left: 4px solid var(--accent-color);">
+            <h4 style="color: var(--text-primary); margin-bottom: 10px;">Already an established engineer?</h4>
+            <p style="font-size: 0.95rem;">If you have a strong portfolio or a track record in system architecture, you
+              may bypass Phase 1. Request an immediate technical assessment by emailing <a
+                href="mailto:dramrxt@proton.me" style="color: var(--accent-color);">dramrxt@proton.me</a> with a link to
+              your GitHub profile.</p>
+          </div>
+
+          <h2 id="architecture-guidelines"
+            style="color: var(--text-primary); margin-bottom: 20px; font-size: 2.2rem; font-weight: 600; margin-top: 50px;">
+            Architecture & Standards</h2>
+          <p style="margin-bottom: 20px;">
+            Before submitting PRs, ensure you have read our core engineering guidelines available in our GitHub
+            repository Wiki. The wiki covers:
+          </p>
+          <ul style="margin-left: 20px; margin-bottom: 40px;">
+            <li>Performance benchmarks and latency upper-bounds for new features.</li>
+            <li>Strict linting and styling (Prettier/ESLint configs for JS/TS; Rustfmt for Rust).</li>
+            <li>Design system primitives and CSS variable naming conventions.</li>
+          </ul>
 
         </div>
       </div>
@@ -102,4 +132,5 @@
     </div>
   </footer>
 </body>
+
 </html>
