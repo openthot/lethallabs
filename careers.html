@@ -149,6 +149,14 @@
               <input type="email" id="email" name="email" class="form-control" required placeholder="john@example.com">
             </div>
             
+            <div id="github-preview" style="display: none; align-items: center; gap: 15px; margin-bottom: 20px; padding: 15px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid var(--border-color);">
+              <img id="github-avatar" src="" alt="Avatar" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--accent-color);">
+              <div>
+                <div id="github-name" style="font-weight: 600; font-size: 0.9rem;"></div>
+                <div id="github-bio" style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.3;"></div>
+              </div>
+            </div>
+
             <div class="form-group">
               <label for="github">GitHub Profile / Portfolio Link</label>
               <input type="url" id="github" name="github" class="form-control" required placeholder="https://github.com/username">
@@ -189,6 +197,36 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <script>
+    // GitHub API Integration for Form Preview
+    const githubInput = document.getElementById('github');
+    const githubPreview = document.getElementById('github-preview');
+    const githubAvatar = document.getElementById('github-avatar');
+    const githubName = document.getElementById('github-name');
+    const githubBio = document.getElementById('github-bio');
+
+    githubInput.addEventListener('blur', async () => {
+      const url = githubInput.value;
+      const match = url.match(/github\.com\/([^\/]+)/);
+      
+      if (match && match[1]) {
+        const username = match[1];
+        try {
+          const response = await fetch(`https://api.github.com/users/${username}`);
+          if (response.ok) {
+            const data = await response.json();
+            githubAvatar.src = data.avatar_url;
+            githubName.textContent = data.name || data.login;
+            githubBio.textContent = data.bio || 'Developer at GitHub';
+            githubPreview.style.display = 'flex';
+            githubPreview.classList.add('fade-in');
+          }
+        } catch (error) {
+          console.error('Error fetching GitHub data:', error);
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>
