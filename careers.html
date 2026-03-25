@@ -28,7 +28,7 @@
       display: inline-block;
       padding: 4px 12px;
       border-radius: 20px;
-      background: rgba(41, 151, 255, 0.1);
+      background: var(--accent-soft);
       color: var(--accent-color);
       font-size: 0.8rem;
       font-weight: 500;
@@ -40,9 +40,7 @@
 <body>
   <nav>
     <div class="nav-content">
-      <div class="nav-brand"><a href="index.html"
-          style="color: white; opacity: 1; display: flex; align-items: center; gap: 8px;"><img src="favicon.png"
-            alt="Logo" style="width: 20px; height: 20px; object-fit: contain;">Lethal Labs</a></div>
+      <div class="nav-brand"><a href="index.html" style="display: flex; align-items: center; gap: 10px; color: var(--text-primary);"><img src="assets/logo.png" alt="Logo" style="width: 32px; height: 32px; object-fit: contain;">Lethal Labs</a></div>
       <button class="mobile-menu-btn" aria-label="Toggle Navigation">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round">
@@ -119,7 +117,7 @@
             </ul>
           </div>
 
-          <div style="background: rgba(41, 151, 255, 0.1); padding: 25px; border-radius: 12px; border-left: 4px solid var(--accent-color);">
+          <div style="background: var(--accent-soft); padding: 25px; border-radius: var(--border-radius); border-left: 4px solid var(--accent-color);">
             <h4 style="color: var(--text-primary); margin-bottom: 10px;">The Interview Process</h4>
             <p style="font-size: 0.95rem; color: var(--text-secondary);">
               1. <strong>Application</strong>: Send your GitHub and portfolio.<br>
@@ -149,7 +147,7 @@
               <input type="email" id="email" name="email" class="form-control" required placeholder="john@example.com">
             </div>
             
-            <div id="github-preview" style="display: none; align-items: center; gap: 15px; margin-bottom: 20px; padding: 15px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid var(--border-color);">
+            <div id="github-preview" style="display: none; align-items: center; gap: 15px; margin-bottom: 20px; padding: 15px; background: #f1f5f9; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
               <img id="github-avatar" src="" alt="Avatar" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--accent-color);">
               <div>
                 <div id="github-name" style="font-weight: 600; font-size: 0.9rem;"></div>
