@@ -6,26 +6,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Colors - ClickUp Inspired */
-  --bg-color: #f9fbfd;
-  --bg-secondary: #ffffff;
+  /* Apple Design System Tokens */
+  --bg-color: #ffffff;
+  --bg-secondary: #f5f5f7;
   --bg-glass: rgba(255, 255, 255, 0.8);
-  --text-primary: #2b3445;
-  --text-secondary: #5e6c84;
-  --accent-color: #7b68ee; /* ClickUp Purple */
-  --accent-hover: #6444d1;
-  --accent-soft: rgba(123, 104, 238, 0.1);
-  --border-color: #e2e8f0;
+  --text-primary: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --accent-color: #0066cc; /* Classic Apple Blue */
+  --accent-hover: #004499;
+  --accent-soft: rgba(0, 102, 204, 0.05);
+  --border-color: #d2d2d7;
   --card-bg: #ffffff;
-  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  --card-shadow-hover: 0 10px 30px rgba(123, 104, 238, 0.15);
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --card-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
 
-  /* Typography */
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Typography - Apple SF Pro Fonts */
+  --font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
 
   /* Spacing */
-  --nav-height: 64px;
-  --section-padding: 80px 20px;
+  --nav-height: 48px;
+  --section-padding: 80px 22px;
   --border-radius: 12px;
 }
 
@@ -39,9 +39,11 @@ body {
   font-family: var(--font-family);
   background-color: var(--bg-color);
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: 1.47059; /* Apple standard */
+  font-size: 17px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.022em;
 }
 
 /* Animations */
@@ -74,7 +76,7 @@ nav {
   background: var(--bg-glass);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,64 +85,64 @@ nav {
 
 .nav-content {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1000px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 
 .nav-brand {
-  font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: -0.02em;
+  font-weight: 500;
+  font-size: 1.1rem;
   color: var(--text-primary);
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {
   display: flex;
-  gap: 24px;
+  gap: 30px;
 }
 
 .nav-links a {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  transition: color 0.2s ease;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-primary);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: var(--accent-color);
+  opacity: 1;
 }
 
 /* Hero Section */
 .hero {
-  min-height: 80vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 120px 20px 60px;
+  padding: 60px 20px;
 }
 
 .hero h1 {
-  font-size: 4rem;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 1.1;
-  margin-bottom: 24px;
-  background: linear-gradient(135deg, #7b68ee 0%, #ff758c 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.07143;
+  margin-bottom: 6px;
+  color: var(--text-primary);
 }
 
 .hero p {
-  font-size: 1.25rem;
+  font-size: 1.7rem;
   color: var(--text-secondary);
-  max-width: 700px;
-  margin-bottom: 40px;
+  max-width: 800px;
+  margin-bottom: 30px;
+  font-weight: 500;
 }
 
 /* Buttons */
@@ -148,34 +150,32 @@ nav {
   display: inline-block;
   background-color: var(--accent-color);
   color: #fff;
-  padding: 14px 28px;
-  border-radius: var(--border-radius);
-  font-size: 1rem;
-  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 980px; /* Apple pill shape */
+  font-size: 17px;
+  font-weight: 400;
   text-align: center;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 14px rgba(123, 104, 238, 0.4);
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
   background-color: var(--accent-hover);
   color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(123, 104, 238, 0.5);
 }
 
 .btn-secondary {
-  background-color: #fff;
-  color: var(--text-primary);
-  border: 1px solid var(--border-color);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  background-color: transparent;
+  color: var(--accent-color);
+  border: none;
+  font-weight: 400;
 }
 
 .btn-secondary:hover {
-  background-color: #f8fafc;
-  color: var(--text-primary);
-  border-color: var(--accent-color);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  text-decoration: underline;
+  color: var(--accent-color);
 }
 
 /* Container */
@@ -196,27 +196,33 @@ nav {
 
 /* Footer */
 footer {
-  background-color: #fff;
-  padding: 60px 20px;
-  text-align: center;
-  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  padding: 64px 22px;
+  text-align: left; /* Apple footer is often left-aligned or column-based */
+  border-top: none;
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 12px;
+}
+
+footer .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 footer p {
   margin-bottom: 20px;
-  font-weight: 500;
+  line-height: 1.33337;
 }
 
 footer a {
-  color: var(--text-secondary);
-  margin: 0 12px;
-  transition: color 0.2s ease;
+  color: #424245;
+  margin: 0 10px 0 0;
+  text-decoration: none;
 }
 
 footer a:hover {
-  color: var(--accent-color);
+  text-decoration: underline;
 }
 
 /* Cards (for projects) */
@@ -227,33 +233,30 @@ footer a:hover {
 }
 
 .card {
-  background-color: var(--card-bg);
-  border-radius: var(--border-radius);
+  background-color: var(--bg-secondary);
+  border-radius: 18px;
   padding: 40px;
   transition: all 0.3s ease;
-  border: 1px solid var(--border-color);
+  border: none;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--card-shadow);
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--card-shadow-hover);
-  border-color: var(--accent-color);
+  transform: scale(1.02);
 }
 
 .card h3 {
   font-size: 1.5rem;
-  margin-bottom: 12px;
-  font-weight: 700;
+  margin-bottom: 10px;
+  font-weight: 600;
   color: var(--text-primary);
 }
 
 .card p {
   color: var(--text-secondary);
-  margin-bottom: 24px;
-  font-size: 1.05rem;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
   flex-grow: 1;
 }
 
@@ -280,29 +283,27 @@ footer a:hover {
 
 .form-control {
   width: 100%;
-  padding: 14px 18px;
-  background-color: #fff;
+  padding: 18px;
+  background-color: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   color: var(--text-primary);
   font-family: var(--font-family);
-  font-size: 1rem;
+  font-size: 17px;
   transition: all 0.2s ease;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
 .form-control:focus {
   outline: none;
   border-color: var(--accent-color);
-  box-shadow: 0 0 0 4px rgba(123, 104, 238, 0.1);
 }
 
 /* Address Box */
 .address-box {
-  background-color: #f8fafc;
-  padding: 18px;
+  background-color: #f5f5f7;
+  padding: 14px 18px;
   border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
+  border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -310,11 +311,10 @@ footer a:hover {
 }
 
 .address-box code {
-  color: var(--accent-color);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 1rem;
+  color: var(--text-primary);
+  font-family: "SF Mono", "SFMono-Regular", ui-monospace, monospace;
+  font-size: 14px;
   word-break: break-all;
-  font-weight: 500;
 }
 
 /* Mobile Menu Button */
