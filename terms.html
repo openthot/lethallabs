@@ -13,7 +13,9 @@
 </head>
 <body>
 
-  <nav>
+  <div class="bg-mesh"></div>
+
+  <nav id="navbar">
     <div class="nav-content">
       <div class="nav-brand">
         <a href="index.html">
@@ -23,46 +25,35 @@
       </div>
       
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="docs.html">Docs</a>
-        <a href="donate.html">Donate</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html">Product</a>
+        <a href="projects.html">Solutions</a>
+        <a href="docs.html">Developers</a>
+        <a href="about.html">Company</a>
       </div>
 
       <div class="nav-right">
-        <div class="search-shortcut">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <span>Search</span>
-          <span style="opacity: 0.5; margin-left: 4px; font-size: 10px; border: 1px solid var(--vp-c-divider); padding: 0 4px; border-radius: 3px;">⌘K</span>
-        </div>
-        <a href="https://github.com/openthot/lethallabs" aria-label="GitHub" class="nav-icon" target="_blank">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-        </a>
-        <button class="mobile-menu-btn" aria-label="Toggle Navigation">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
+        <a href="contact.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.875rem;">Get Started</a>
       </div>
     </div>
   </nav>
   
   <main>
-    <section class="container fade-in" style="padding-top: 120px; padding-bottom: 120px;">
-      <div style="max-width: 800px; margin: 0 auto;">
-        <div class="section-header" style="text-align: left;">
-          <h1>Terms of Service</h1>
-          <p style="color: var(--vp-c-text-2);">Last updated: May 9, 2026</p>
-        </div>
+    <section class="hero hero-simple">
+      <div class="hero-content">
+        <h1>Terms of <span>Service.</span></h1>
+        <p>Last updated: May 9, 2026</p>
+      </div>
+    </section>
 
-        <div class="content-text" style="color: var(--vp-c-text-2); font-size: 1.1rem; line-height: 1.8; margin-top: 48px;">
+    <section class="container">
+      <div style="max-width: 800px; margin: 80px auto;">
+        <div class="content-text" style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;">
           <p>Welcome to Lethal Labs. By accessing our website, you agree to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.</p>
           
-          <h2 style="color: var(--vp-c-text-1); margin-top: 40px; margin-bottom: 20px;">1. Use License</h2>
+          <h2 style="color: var(--text-primary); margin-top: 40px; margin-bottom: 20px; font-size: 1.5rem; font-weight: 700;">1. Use License</h2>
           <p>Permission is granted to temporarily download one copy of the materials (information or software) on Lethal Labs' website for personal, non-commercial transitory viewing only.</p>
           <p>This is the grant of a license, not a transfer of title, and under this license you may not:</p>
-          <ul style="margin-left: 24px; margin-top: 12px;">
+          <ul style="margin-left: 24px; margin-top: 12px; margin-bottom: 24px;">
             <li>Modify or copy the materials;</li>
             <li>Use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
             <li>Attempt to decompile or reverse engineer any software contained on Lethal Labs' website;</li>
@@ -70,16 +61,16 @@
             <li>Transfer the materials to another person or "mirror" the materials on any other server.</li>
           </ul>
           
-          <h2 style="color: var(--vp-c-text-1); margin-top: 40px; margin-bottom: 20px;">2. Disclaimer</h2>
+          <h2 style="color: var(--text-primary); margin-top: 40px; margin-bottom: 20px; font-size: 1.5rem; font-weight: 700;">2. Disclaimer</h2>
           <p>The materials on Lethal Labs' website are provided on an 'as is' basis. Lethal Labs makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
           
-          <h2 style="color: var(--vp-c-text-1); margin-top: 40px; margin-bottom: 20px;">3. Limitations</h2>
+          <h2 style="color: var(--text-primary); margin-top: 40px; margin-bottom: 20px; font-size: 1.5rem; font-weight: 700;">3. Limitations</h2>
           <p>In no event shall Lethal Labs or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Lethal Labs' website.</p>
           
-          <h2 style="color: var(--vp-c-text-1); margin-top: 40px; margin-bottom: 20px;">4. Accuracy of Materials</h2>
+          <h2 style="color: var(--text-primary); margin-top: 40px; margin-bottom: 20px; font-size: 1.5rem; font-weight: 700;">4. Accuracy of Materials</h2>
           <p>The materials appearing on Lethal Labs' website could include technical, typographical, or photographic errors. Lethal Labs does not warrant that any of the materials on its website are accurate, complete or current. Lethal Labs may make changes to the materials contained on its website at any time without notice.</p>
           
-          <h2 style="color: var(--vp-c-text-1); margin-top: 40px; margin-bottom: 20px;">5. Governing Law</h2>
+          <h2 style="color: var(--text-primary); margin-top: 40px; margin-bottom: 20px; font-size: 1.5rem; font-weight: 700;">5. Governing Law</h2>
           <p>These terms and conditions are governed by and construed in accordance with the laws of the jurisdiction in which Lethal Labs operates and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
         </div>
       </div>
@@ -87,49 +78,58 @@
   </main>
 
   <footer>
-    <div class="footer-grid container">
-      <div class="footer-column" style="grid-column: span 2;">
-        <div class="nav-brand" style="margin-bottom: 24px;">
+    <div class="footer-grid">
+      <div class="footer-info">
+        <div class="nav-brand">
           <img src="assets/logo.png" alt="Lethal Labs Logo">
           <span>Lethal Labs</span>
         </div>
-        <p style="color: var(--vp-c-text-2); max-width: 320px;">Redefining the standards of software engineering through premium design and open source innovation.</p>
+        <p>Premium engineering solutions for a compromised world. Building the next generation of secure infrastructure.</p>
       </div>
-      <div class="footer-column">
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="projects.html">Ecosystem</a></li>
+          <li><a href="docs.html">Documentation</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <li><a href="about.html">About Us</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="donate.html">Support Us</a></li>
         </ul>
       </div>
-      <div class="footer-column">
-        <h4>Resources</h4>
+      <div class="footer-col">
+        <h4>Legal</h4>
         <ul>
-          <li><a href="docs.html">Documentation</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="donate.html">Donate</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>Social</h4>
-        <ul>
-          <li><a href="https://github.com/openthot" target="_blank">GitHub</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">LinkedIn</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="LICENSE">License</a></li>
         </ul>
       </div>
     </div>
-    
     <div class="footer-bottom">
       <p>&copy; 2026 Lethal Labs. All rights reserved.</p>
       <div style="display: flex; gap: 24px;">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
+        <a href="https://github.com/openthot" target="_blank">GitHub</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.onscroll = () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    };
+  </script>
 </body>
 </html>
