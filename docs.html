@@ -1,18 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lethal Labs | Docs & Insiders</title>
-  <meta name="description"
-    content="Official documentation on the inner workings of Lethal Labs and the Insider application process.">
+  <meta name="description" content="Official documentation on the inner workings of Lethal Labs and the Insider application process.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .docs-layout {
+      display: flex;
+      gap: 64px;
+      align-items: flex-start;
+    }
+    .docs-sidebar {
+      width: 240px;
+      position: sticky;
+      top: calc(var(--vp-nav-height) + 32px);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .docs-sidebar h3 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--vp-c-text-1);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .docs-sidebar a {
+      font-size: 14px;
+      color: var(--vp-c-text-2);
+      padding: 6px 0;
+      border-left: 2px solid transparent;
+      transition: var(--transition);
+    }
+    .docs-sidebar a:hover {
+      color: var(--vp-c-brand);
+    }
+    .docs-sidebar a.active {
+      color: var(--vp-c-brand);
+      font-weight: 600;
+    }
+    .docs-content {
+      flex: 1;
+      max-width: 800px;
+    }
+    .docs-content h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-top: 48px;
+      margin-bottom: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--vp-c-divider);
+    }
+    .docs-content h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+    .docs-content p {
+      margin-bottom: 20px;
+      color: var(--vp-c-text-2);
+      line-height: 1.7;
+    }
+    .docs-content ol, .docs-content ul {
+      margin-bottom: 24px;
+      padding-left: 20px;
+      color: var(--vp-c-text-2);
+    }
+    .docs-content li {
+      margin-bottom: 12px;
+    }
+    .docs-content strong {
+      color: var(--vp-c-text-1);
+    }
+    @media (max-width: 960px) {
+      .docs-layout {
+        flex-direction: column;
+        gap: 32px;
+      }
+      .docs-sidebar {
+        width: 100%;
+        position: static;
+        padding: 24px;
+        background-color: var(--vp-c-bg-soft);
+        border-radius: 12px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-  <div class="bg-mesh"></div>
 
   <nav>
     <div class="nav-content">
@@ -27,108 +109,88 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
-        <a href="docs.html" style="color: white;">Docs</a>
+        <a href="docs.html" class="active">Docs</a>
         <a href="donate.html">Donate</a>
         <a href="careers.html">Careers</a>
         <a href="contact.html">Contact</a>
       </div>
 
       <div class="nav-right">
+        <div class="search-shortcut">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search</span>
+          <span style="opacity: 0.5; margin-left: 4px; font-size: 10px; border: 1px solid var(--vp-c-divider); padding: 0 4px; border-radius: 3px;">⌘K</span>
+        </div>
+        <a href="https://github.com/openthot/lethallabs" aria-label="GitHub" class="nav-icon" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
         <button class="mobile-menu-btn" aria-label="Toggle Navigation">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
-        <a href="projects.html" class="btn btn-primary" style="padding: 8px 16px; font-size: 13px;">Get Started</a>
       </div>
     </div>
   </nav>
-
+  
   <main>
-    <section class="hero">
-      <h1>Documentation.</h1>
-      <p>Transparency from the inside out.</p>
+    <section class="hero fade-in">
+      <h1><span>Documentation.</span></h1>
+      <p>Transparency from the inside out. Understanding the core of Lethal Labs.</p>
     </section>
 
-    <section class="container">
-      <div style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
-
-        <!-- Sidebar Navigation (Mock) -->
-        <aside
-          style="flex: 1; min-width: 250px; background: var(--bg-secondary); padding: 30px; border-radius: var(--border-radius); position: sticky; top: 100px;">
-          <h3 style="margin-bottom: 20px; font-size: 1.1rem; color: var(--text-primary);">Table of Contents</h3>
-          <ul style="list-style: none; padding: 0;">
-            <li style="margin-bottom: 12px;"><a href="#operating-model"
-                style="color: var(--accent-color); font-weight: 500;">Our Operating Model</a></li>
-            <li style="margin-bottom: 12px;"><a href="#insider-program" style="color: var(--text-secondary);">The
-                Insider Program</a></li>
-            <li style="margin-bottom: 12px;"><a href="#architecture-guidelines"
-                style="color: var(--text-secondary);">Architecture & Standards</a></li>
-            <li style="margin-bottom: 12px;"><a href="https://github.com/openthot/lethallabs/wiki"
-                style="color: var(--text-secondary);">GitHub Wiki ↗</a></li>
-          </ul>
+    <section class="container fade-in" style="animation-delay: 0.1s;">
+      <div class="docs-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="docs-sidebar">
+          <h3>Table of Contents</h3>
+          <a href="#operating-model" class="active">Our Operating Model</a>
+          <a href="#insider-program">The Insider Program</a>
+          <a href="#architecture-guidelines">Architecture & Standards</a>
+          <a href="https://github.com/openthot/lethallabs/wiki" target="_blank" style="margin-top: 12px; display: flex; align-items: center; gap: 4px;">
+            GitHub Wiki 
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
         </aside>
 
         <!-- Main Content area -->
-        <div style="flex: 3; min-width: 300px; color: var(--text-secondary); line-height: 1.8;">
-
-          <h2 id="operating-model"
-            style="color: var(--text-primary); margin-bottom: 20px; font-size: 2.2rem; font-weight: 600;">How We Work
-          </h2>
-          <p style="margin-bottom: 20px;">
-            Lethal Labs operates as a distributed, highly autonomous, asynchronous firm. We do not track hours. We do
-            not micromanage. We measure output via git commits and deployed features.
+        <div class="docs-content">
+          <h2 id="operating-model">How We Work</h2>
+          <p>
+            Lethal Labs operates as a distributed, highly autonomous, asynchronous firm. We do not track hours. We do not micromanage. We measure output via git commits, architectural integrity, and successfully deployed features.
           </p>
-          <p style="margin-bottom: 40px;">
-            Our primary focus is divided into two areas: sustaining our proprietary SaaS products (which generates
-            capital) and continuously donating high-performance primitives to the open-source community as public goods.
+          <p>
+            Our primary focus is divided into two core areas: sustaining our proprietary SaaS products (which generates the capital necessary for our research) and continuously donating high-performance primitives to the open-source community as public goods.
           </p>
 
-          <h2 id="insider-program"
-            style="color: var(--text-primary); margin-bottom: 20px; font-size: 2.2rem; font-weight: 600;">How To Become
-            an "Insider"</h2>
-          <p style="margin-bottom: 20px;">
-            "Insiders" are the core maintainers and staff engineers forming the backbone of Lethal Labs. We rarely hire
-            through traditional interviews. Instead, we use an open, meritocratic approach.
+          <h2 id="insider-program">How To Become an "Insider"</h2>
+          <p>
+            "Insiders" are the core maintainers and staff engineers forming the backbone of Lethal Labs. We rarely hire through traditional interviews. Instead, we use an open, meritocratic approach.
           </p>
-          <ol style="margin-left: 20px; margin-bottom: 40px;">
-            <li style="margin-bottom: 15px;">
-              <strong style="color: var(--text-primary);">Phase 1: Contribute (Open Source).</strong> Find one of our
-              public repositories on GitHub. Fix a bug, optimize an algorithm, or submit an RFC for a feature. Prove
-              your capability through PRs.
+          <ol>
+            <li>
+              <strong>Phase 1: Contribute (Open Source).</strong> Find one of our public repositories on GitHub. Fix a bug, optimize an algorithm, or submit an RFC for a feature. Prove your capability through meaningful pull requests.
             </li>
-            <li style="margin-bottom: 15px;">
-              <strong style="color: var(--text-primary);">Phase 2: Establish Context.</strong> After consistent
-              high-quality contributions, current Insiders will grant you triage permissions. Engage in code reviews
-              architecture discussions.
+            <li>
+              <strong>Phase 2: Establish Context.</strong> After consistent high-quality contributions, current Insiders will grant you triage permissions. Engage in deep code reviews and architectural discussions.
             </li>
-            <li style="margin-bottom: 15px;">
-              <strong style="color: var(--text-primary);">Phase 3: The Invitation.</strong> Once consensus is reached
-              among the core team, you will receive a formal invite to join Lethal Labs, granting access to private SaaS
-              repos and corresponding compensation.
+            <li>
+              <strong>Phase 3: The Invitation.</strong> Once consensus is reached among the core team, you will receive a formal invite to join Lethal Labs, granting access to private SaaS repositories and corresponding compensation.
             </li>
           </ol>
 
-          <div
-            style="background: var(--accent-soft); padding: 25px; border-radius: var(--border-radius); border-left: 4px solid var(--accent-color);">
-            <h4 style="color: var(--text-primary); margin-bottom: 10px;">Already an established engineer?</h4>
-            <p style="font-size: 0.95rem;">If you have a strong portfolio or a track record in system architecture, you
-              may bypass Phase 1. Request an immediate technical assessment by emailing <a
-                href="mailto:dramrxt@proton.me" style="color: var(--accent-color);">dramrxt@proton.me</a> with a link to
-              your GitHub profile.</p>
+          <div class="card" style="background-color: var(--vp-c-bg-soft); border-left: 4px solid var(--vp-c-brand); margin-top: 32px;">
+            <h4 style="color: var(--vp-c-text-1); margin-bottom: 8px; font-weight: 600;">Already an established engineer?</h4>
+            <p style="font-size: 0.95rem; margin-bottom: 0;">If you have a strong portfolio or a track record in system architecture, you may bypass Phase 1. Request an immediate technical assessment by emailing <a href="mailto:dramrxt@proton.me" style="color: var(--vp-c-brand);">dramrxt@proton.me</a> with a link to your GitHub profile.</p>
           </div>
 
-          <h2 id="architecture-guidelines"
-            style="color: var(--text-primary); margin-bottom: 20px; font-size: 2.2rem; font-weight: 600; margin-top: 50px;">
-            Architecture & Standards</h2>
-          <p style="margin-bottom: 20px;">
-            Before submitting PRs, ensure you have read our core engineering guidelines available in our GitHub
-            repository Wiki. The wiki covers:
+          <h2 id="architecture-guidelines">Architecture & Standards</h2>
+          <p>
+            Before submitting PRs, ensure you have read our core engineering guidelines available in our GitHub repository Wiki. Our standards are high because our users depend on our stability.
           </p>
-          <ul style="margin-left: 20px; margin-bottom: 40px;">
-            <li>Performance benchmarks and latency upper-bounds for new features.</li>
-            <li>Strict linting and styling (Prettier/ESLint configs for JS/TS; Rustfmt for Rust).</li>
-            <li>Design system primitives and CSS variable naming conventions.</li>
+          <ul>
+            <li><strong>Performance First:</strong> Benchmarks and latency upper-bounds for every new feature.</li>
+            <li><strong>Strict Tooling:</strong> Prettier/ESLint for JS/TS; Rustfmt and Clippy for Rust projects.</li>
+            <li><strong>Design Integrity:</strong> Adherence to our design system primitives and CSS variable naming conventions.</li>
           </ul>
-
         </div>
       </div>
     </section>
@@ -137,37 +199,35 @@
   <footer>
     <div class="footer-content">
       <div class="footer-brand">
-        <a href="index.html" style="font-weight: 700; font-size: 1.25rem; display: flex; align-items: center; gap: 10px;">
+        <a href="index.html" style="font-weight: 700; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
           <img src="assets/logo.png" alt="Logo" style="width: 24px;"> Lethal Labs
         </a>
         <p>Building premium SaaS and open source tools for a compromised world. Code with excellence.</p>
       </div>
       
-      <div class="footer-links">
-        <div class="footer-column">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="docs.html">Documentation</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="donate.html">Donate</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Social</h4>
-          <ul>
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">LinkedIn</a></li>
-          </ul>
-        </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="docs.html">Documentation</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Social</h4>
+        <ul>
+          <li><a href="https://github.com/openthot" target="_blank">GitHub</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
       </div>
     </div>
     
@@ -179,7 +239,7 @@
       </div>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
-
 </html>

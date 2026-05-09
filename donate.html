@@ -7,9 +7,36 @@
   <meta name="description" content="Support Lethal Labs' open source ecosystem via cryptocurrency donations.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .address-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 16px;
+      background-color: var(--vp-c-bg-alt);
+      border: 1px solid var(--vp-c-divider);
+      border-radius: 8px;
+      margin-top: 8px;
+    }
+    .address-box code {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--vp-c-text-1);
+      word-break: break-all;
+    }
+    .copy-btn {
+      flex-shrink: 0;
+      padding: 6px 12px;
+      font-size: 12px;
+      height: 32px;
+    }
+  </style>
 </head>
 <body>
-  <div class="bg-mesh"></div>
 
   <nav>
     <div class="nav-content">
@@ -25,63 +52,70 @@
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="docs.html">Docs</a>
-        <a href="donate.html" style="color: white;">Donate</a>
+        <a href="donate.html" class="active">Donate</a>
         <a href="careers.html">Careers</a>
         <a href="contact.html">Contact</a>
       </div>
 
       <div class="nav-right">
+        <div class="search-shortcut">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search</span>
+          <span style="opacity: 0.5; margin-left: 4px; font-size: 10px; border: 1px solid var(--vp-c-divider); padding: 0 4px; border-radius: 3px;">⌘K</span>
+        </div>
+        <a href="https://github.com/openthot/lethallabs" aria-label="GitHub" class="nav-icon" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
         <button class="mobile-menu-btn" aria-label="Toggle Navigation">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
-        <a href="projects.html" class="btn btn-primary" style="padding: 8px 16px; font-size: 13px;">Get Started</a>
       </div>
     </div>
   </nav>
   
   <main>
-    <section class="hero">
-      <h1>Support the Mission.</h1>
+    <section class="hero fade-in">
+      <h1>Support the <span>Mission.</span></h1>
       <p>Your contributions fuel our open source research and independent software development.</p>
     </section>
 
-    <section class="container">
+    <section class="container fade-in" style="animation-delay: 0.1s;">
       
-      <div style="max-width: 600px; margin: 0 auto; text-align: center; margin-bottom: 40px;">
-        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6;">
-          Maintaining high-performance libraries and headless frameworks takes massive engineering effort. If our tools have saved your organization time, consider backing our work. We currently accept support exclusively via cryptocurrency to preserve autonomy.
+      <div style="max-width: 768px; margin: 0 auto; text-align: center; margin-bottom: 64px;">
+        <p style="color: var(--vp-c-text-2); font-size: 1.1rem; line-height: 1.8;">
+          Maintaining high-performance libraries and headless frameworks takes massive engineering effort. If our tools have saved your organization time, consider backing our work. We currently accept support exclusively via cryptocurrency to preserve our technical autonomy.
         </p>
       </div>
 
-      <div style="max-width: 600px; margin: 0 auto;">
+      <div style="max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px;">
         
-        <div class="card" style="margin-bottom: 20px;">
-          <h3 style="margin-bottom: 20px; color: #F7931A; display: flex; align-items: center; gap: 10px;">
+        <div class="card">
+          <h3 style="color: #F7931A; display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
              Bitcoin (BTC)
           </h3>
           <div class="address-box">
              <code>bc1q0q3k70q95d6pqjqnnzwdcl3ughqsuet2g3vgj3</code>
-             <button class="btn" style="padding: 8px 15px; font-size: 0.8rem; background: var(--bg-secondary); border: 1px solid var(--border-color); color: var(--text-primary);" onclick="navigator.clipboard.writeText('bc1q0q3k70q95d6pqjqnnzwdcl3ughqsuet2g3vgj3').then(()=>alert('Copied!'))">Copy</button>
+             <button class="btn btn-secondary copy-btn" onclick="navigator.clipboard.writeText('bc1q0q3k70q95d6pqjqnnzwdcl3ughqsuet2g3vgj3').then(()=>alert('Copied!'))">Copy</button>
           </div>
         </div>
 
-        <div class="card" style="margin-bottom: 20px;">
-          <h3 style="margin-bottom: 20px; color: #627EEA; display: flex; align-items: center; gap: 10px;">
+        <div class="card">
+          <h3 style="color: #627EEA; display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
              Ethereum / ERC-20 (ETH)
           </h3>
           <div class="address-box">
              <code>0x664d8099638C83ffce35a3608438FF4C634C0000</code>
-             <button class="btn" style="padding: 8px 15px; font-size: 0.8rem; background: var(--bg-secondary); border: 1px solid var(--border-color); color: var(--text-primary);" onclick="navigator.clipboard.writeText('0x664d8099638C83ffce35a3608438FF4C634C0000').then(()=>alert('Copied!'))">Copy</button>
+             <button class="btn btn-secondary copy-btn" onclick="navigator.clipboard.writeText('0x664d8099638C83ffce35a3608438FF4C634C0000').then(()=>alert('Copied!'))">Copy</button>
           </div>
         </div>
 
-        <div class="card" style="margin-bottom: 20px;">
-          <h3 style="margin-bottom: 20px; color: #14F195; display: flex; align-items: center; gap: 10px;">
+        <div class="card">
+          <h3 style="color: #14F195; display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
              Solana (SOL)
           </h3>
           <div class="address-box">
              <code>2VPJsuJyJGYuoyACBA16GCRdqZXupZJDN8uyH9twRziQ</code>
-             <button class="btn" style="padding: 8px 15px; font-size: 0.8rem; background: var(--bg-secondary); border: 1px solid var(--border-color); color: var(--text-primary);" onclick="navigator.clipboard.writeText('2VPJsuJyJGYuoyACBA16GCRdqZXupZJDN8uyH9twRziQ').then(()=>alert('Copied!'))">Copy</button>
+             <button class="btn btn-secondary copy-btn" onclick="navigator.clipboard.writeText('2VPJsuJyJGYuoyACBA16GCRdqZXupZJDN8uyH9twRziQ').then(()=>alert('Copied!'))">Copy</button>
           </div>
         </div>
 
@@ -93,37 +127,35 @@
   <footer>
     <div class="footer-content">
       <div class="footer-brand">
-        <a href="index.html" style="font-weight: 700; font-size: 1.25rem; display: flex; align-items: center; gap: 10px;">
+        <a href="index.html" style="font-weight: 700; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
           <img src="assets/logo.png" alt="Logo" style="width: 24px;"> Lethal Labs
         </a>
         <p>Building premium SaaS and open source tools for a compromised world. Code with excellence.</p>
       </div>
       
-      <div class="footer-links">
-        <div class="footer-column">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="docs.html">Documentation</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="donate.html">Donate</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Social</h4>
-          <ul>
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">LinkedIn</a></li>
-          </ul>
-        </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="docs.html">Documentation</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Social</h4>
+        <ul>
+          <li><a href="https://github.com/openthot" target="_blank">GitHub</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
       </div>
     </div>
     
@@ -135,6 +167,7 @@
       </div>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

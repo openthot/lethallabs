@@ -1,30 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lethal Labs | Join the Core</title>
-  <meta name="description"
-    content="Join Lethal Labs and help us build the future of premium SaaS and open source software.">
+  <meta name="description" content="Join Lethal Labs and help us build the future of premium SaaS and open source software.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     .role-badge {
       display: inline-block;
       padding: 4px 12px;
-      border-radius: 20px;
-      background: var(--accent-soft);
-      color: var(--accent-color);
+      border-radius: 12px;
+      background-color: var(--vp-c-bg-soft);
+      color: var(--vp-c-brand);
       font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 14px;
       font-weight: 500;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+      color: var(--vp-c-text-1);
+    }
+    .form-control {
+      width: 100%;
+      background-color: var(--vp-c-bg-alt);
+      border: 1px solid var(--vp-c-border);
+      border-radius: 8px;
+      padding: 12px 16px;
+      color: var(--vp-c-text-1);
+      font-family: inherit;
+      font-size: 14px;
+      transition: var(--transition);
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--vp-c-brand);
+    }
+    #github-preview {
+      display: none;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding: 16px;
+      background-color: var(--vp-c-bg-alt);
+      border-radius: 12px;
+      border: 1px solid var(--vp-c-brand);
+    }
+    #github-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid var(--vp-c-brand);
     }
   </style>
 </head>
-
 <body>
-  <div class="bg-mesh"></div>
 
   <nav>
     <div class="nav-content">
@@ -41,78 +81,90 @@
         <a href="projects.html">Projects</a>
         <a href="docs.html">Docs</a>
         <a href="donate.html">Donate</a>
-        <a href="careers.html" style="color: white;">Careers</a>
+        <a href="careers.html" class="active">Careers</a>
         <a href="contact.html">Contact</a>
       </div>
 
       <div class="nav-right">
+        <div class="search-shortcut">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search</span>
+          <span style="opacity: 0.5; margin-left: 4px; font-size: 10px; border: 1px solid var(--vp-c-divider); padding: 0 4px; border-radius: 3px;">⌘K</span>
+        </div>
+        <a href="https://github.com/openthot/lethallabs" aria-label="GitHub" class="nav-icon" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
         <button class="mobile-menu-btn" aria-label="Toggle Navigation">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
-        <a href="projects.html" class="btn btn-primary" style="padding: 8px 16px; font-size: 13px;">Get Started</a>
       </div>
     </div>
   </nav>
-
+  
   <main>
-    <section class="hero">
-      <div class="role-badge">Careers</div>
-      <h1>Join the Core.</h1>
+    <section class="hero fade-in">
+      <div class="badge">Careers</div>
+      <h1>Join the <span>Core.</span></h1>
       <p>We're looking for extreme talent to help us redefine engineering standards from the shadows.</p>
     </section>
 
-    <section class="container">
-      <h2 class="section-title">The Lethal Edge</h2>
-      <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 80px;">
-        <div class="culture-card">
-          <div style="font-size: 2.5rem; margin-bottom: 20px;">⚡</div>
+    <section class="container fade-in" style="animation-delay: 0.1s;">
+      <div class="section-header">
+        <h2>The Lethal Edge</h2>
+      </div>
+      
+      <div class="grid" style="margin-bottom: 80px;">
+        <div class="card">
+          <div class="icon">⚡</div>
           <h3>Extreme Autonomy</h3>
-          <p style="color: var(--text-secondary);">We don't track hours or have meetings. We track commits and features. You are in control of your time.</p>
+          <p>We don't track hours or have meetings. We track commits and features. You are in control of your time and your impact.</p>
         </div>
-        <div class="culture-card">
-          <div style="font-size: 2.5rem; margin-bottom: 20px;">💎</div>
+        
+        <div class="card">
+          <div class="icon">💎</div>
           <h3>Premium Standards</h3>
-          <p style="color: var(--text-secondary);">"Good enough" isn't in our vocabulary. We build software that feels like art, with performance as a priority.</p>
+          <p>"Good enough" isn't in our vocabulary. We build software that feels like art, with performance as a non-negotiable priority.</p>
         </div>
-        <div class="culture-card">
-          <div style="font-size: 2.5rem; margin-bottom: 20px;">🤝</div>
+        
+        <div class="card">
+          <div class="icon">🤝</div>
           <h3>Global Impact</h3>
-          <p style="color: var(--text-secondary);">Your code will power tools used by thousands of creators and businesses worldwide through our SaaS and OS projects.</p>
+          <p>Your code will power tools used by thousands of creators and businesses worldwide through our SaaS and Open Source projects.</p>
         </div>
       </div>
 
-      <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 50px; align-items: start;">
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: start; gap: 48px;">
         <!-- Left Side: Roles & Interview Info -->
         <div>
-          <h2 style="font-size: 2rem; margin-bottom: 20px; font-weight: 600;">How to Join</h2>
-          <p style="color: var(--text-secondary); margin-bottom: 30px; line-height: 1.6;">
-            We don't do traditional whiteboarding or multiple rounds of behavioral interviews. We want to see how you build.
+          <h2 style="font-size: 2rem; margin-bottom: 24px; font-weight: 700;">How to Join</h2>
+          <p style="color: var(--vp-c-text-2); margin-bottom: 32px; line-height: 1.6;">
+            We don't do traditional whiteboarding or multiple rounds of behavioral interviews. We want to see how you build and how you think about complex systems.
           </p>
 
-          <div style="margin-bottom: 30px;">
-            <h3 style="font-size: 1.2rem; margin-bottom: 15px; color: var(--text-primary);">Open Roles</h3>
-            <ul style="list-style: none; padding: 0;">
-              <li style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border-color);">
+          <div style="margin-bottom: 40px;">
+            <h3 style="font-size: 1.2rem; margin-bottom: 20px; color: var(--vp-c-text-1);">Open Roles</h3>
+            <div style="display: flex; flex-direction: column; gap: 24px;">
+              <div style="padding-bottom: 24px; border-bottom: 1px solid var(--vp-c-divider);">
                 <span class="role-badge">Full-Stack</span>
-                <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Systems Engineer</h4>
-                <p style="font-size: 0.9rem; color: var(--text-secondary);">Expertise in React, Node.js, and scaling high-traffic SaaS backends.</p>
-              </li>
-              <li style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border-color);">
+                <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Systems Engineer</h4>
+                <p style="font-size: 0.95rem; color: var(--vp-c-text-2);">Expertise in React, Node.js, and scaling high-traffic SaaS backends with robust architecture.</p>
+              </div>
+              <div style="padding-bottom: 24px; border-bottom: 1px solid var(--vp-c-divider);">
                 <span class="role-badge">Front-End</span>
-                <h4 style="font-size: 1.1rem; margin-bottom: 5px;">UI/UX Engineer</h4>
-                <p style="font-size: 0.9rem; color: var(--text-secondary);">Obsessed with micro-interactions, animations, and the Apple aesthetics.</p>
-              </li>
-              <li style="margin-bottom: 20px;">
+                <h4 style="font-size: 1.1rem; margin-bottom: 8px;">UI/UX Engineer</h4>
+                <p style="font-size: 0.95rem; color: var(--vp-c-text-2);">Obsessed with micro-interactions, animations, and the pursuit of perfect digital aesthetics.</p>
+              </div>
+              <div>
                 <span class="role-badge">Open Application</span>
-                <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Niche Talent</h4>
-                <p style="font-size: 0.9rem; color: var(--text-secondary);">Think you have something we need? Tell us what and why.</p>
-              </li>
-            </ul>
+                <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Niche Talent</h4>
+                <p style="font-size: 0.95rem; color: var(--vp-c-text-2);">Think you have something we need? Show us your work and tell us why you're a fit.</p>
+              </div>
+            </div>
           </div>
 
-          <div style="background: var(--accent-soft); padding: 25px; border-radius: var(--border-radius); border-left: 4px solid var(--accent-color);">
-            <h4 style="color: var(--text-primary); margin-bottom: 10px;">The Interview Process</h4>
-            <p style="font-size: 0.95rem; color: var(--text-secondary);">
+          <div style="background-color: var(--vp-c-bg-soft); padding: 28px; border-radius: 12px; border-left: 4px solid var(--vp-c-brand);">
+            <h4 style="color: var(--vp-c-text-1); margin-bottom: 12px; font-weight: 600;">The Interview Process</h4>
+            <p style="font-size: 0.95rem; color: var(--vp-c-text-2); line-height: 1.8;">
               1. <strong>Application</strong>: Send your GitHub and portfolio.<br>
               2. <strong>Trial Task</strong>: A small, paid task to see your code in action.<br>
               3. <strong>Integration</strong>: Join the core team.
@@ -122,9 +174,9 @@
 
         <!-- Right Side: Application Form -->
         <div class="card">
-          <h3 style="margin-bottom: 20px; font-size: 1.4rem;">Apply for an Interview</h3>
-          <p style="color: var(--text-secondary); margin-bottom: 25px; font-size: 0.9rem;">
-            Fill out the form below or email <a href="mailto:dramrxt@proton.me" style="color: var(--accent-color);">dramrxt@proton.me</a> directly.
+          <h3 style="margin-bottom: 12px; font-size: 1.4rem; font-weight: 700;">Apply for an Interview</h3>
+          <p style="color: var(--vp-c-text-2); margin-bottom: 24px; font-size: 0.9rem;">
+            Fill out the form below or email <a href="mailto:dramrxt@proton.me" style="color: var(--vp-c-brand);">dramrxt@proton.me</a> directly.
           </p>
           <form action="https://formsubmit.co/dramrxt@proton.me" method="POST">
             <input type="hidden" name="_next" value="https://openthot.github.io/lethallabs/careers.html">
@@ -140,11 +192,11 @@
               <input type="email" id="email" name="email" class="form-control" required placeholder="john@example.com">
             </div>
             
-            <div id="github-preview" style="display: none; align-items: center; gap: 15px; margin-bottom: 20px; padding: 15px; background: #f1f5f9; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
-              <img id="github-avatar" src="" alt="Avatar" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--accent-color);">
+            <div id="github-preview">
+              <img id="github-avatar" src="" alt="Avatar">
               <div>
-                <div id="github-name" style="font-weight: 600; font-size: 0.9rem;"></div>
-                <div id="github-bio" style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.3;"></div>
+                <div id="github-name" style="font-weight: 600; font-size: 0.9rem; color: var(--vp-c-text-1);"></div>
+                <div id="github-bio" style="font-size: 0.75rem; color: var(--vp-c-text-2); line-height: 1.3;"></div>
               </div>
             </div>
 
@@ -155,7 +207,7 @@
             
             <div class="form-group">
               <label for="role">Desired Role</label>
-              <select id="role" name="role" class="form-control" style="appearance: none;">
+              <select id="role" name="role" class="form-control" style="appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22rgba(235%2C%20235%2C%20245%2C%200.6)%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 12px center; background-size: 16px;">
                 <option value="systems-engineer">Systems Engineer</option>
                 <option value="ui-ux-engineer">UI/UX Engineer</option>
                 <option value="niche-talent">Niche Talent</option>
@@ -168,7 +220,7 @@
                 placeholder="Tell us about your most impressive technical achievement..."></textarea>
             </div>
             
-            <button type="submit" class="btn" style="width: 100%;">Submit Application</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Application</button>
           </form>
         </div>
       </div>
@@ -178,37 +230,35 @@
   <footer>
     <div class="footer-content">
       <div class="footer-brand">
-        <a href="index.html" style="font-weight: 700; font-size: 1.25rem; display: flex; align-items: center; gap: 10px;">
+        <a href="index.html" style="font-weight: 700; font-size: 1.2rem; display: flex; align-items: center; gap: 10px;">
           <img src="assets/logo.png" alt="Logo" style="width: 24px;"> Lethal Labs
         </a>
         <p>Building premium SaaS and open source tools for a compromised world. Code with excellence.</p>
       </div>
       
-      <div class="footer-links">
-        <div class="footer-column">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="docs.html">Documentation</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="donate.html">Donate</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Social</h4>
-          <ul>
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">LinkedIn</a></li>
-          </ul>
-        </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="docs.html">Documentation</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Social</h4>
+        <ul>
+          <li><a href="https://github.com/openthot" target="_blank">GitHub</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
       </div>
     </div>
     
@@ -220,6 +270,7 @@
       </div>
     </div>
   </footer>
+
   <script src="script.js"></script>
   <script>
     // GitHub API Integration for Form Preview
@@ -252,5 +303,4 @@
     });
   </script>
 </body>
-
 </html>
