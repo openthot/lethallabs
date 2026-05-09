@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-/*
-  Lethal Labs - Base Styles
-  Apple-inspired Design System (Premium Dark Mode)
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-:root {
-  /* Apple Design System Tokens */
-  --bg-color: #ffffff;
-  --bg-secondary: #f5f5f7;
-  --bg-glass: rgba(29, 29, 31, 0.9); /* Darker tint for header */
-  --text-primary: #1d1d1f;
-  --text-secondary: #6e6e73;
-  --nav-text: #f5f5f7; /* Light text for dark header */
-  --accent-color: #0066cc; /* Classic Apple Blue */
-  --accent-hover: #004499;
-  --accent-soft: rgba(0, 102, 204, 0.05);
-  --border-color: #d2d2d7;
-  --card-bg: #ffffff;
-  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  --card-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
-
-  /* Typography - Apple SF Pro Fonts */
-  --font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
-
-  /* Spacing */
-  --nav-height: 48px;
-  --section-padding: 80px 22px;
-  --border-radius: 12px;
-}
-
-=======
 /* ... (keep existing variables) ... */
 :root {
   /* Colors */
@@ -67,24 +33,12 @@
 }
 
 /* Base Reset */
->>>>>>> 8085292 (redesigned inspired from kimi cli github page)
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-<<<<<<< HEAD
-body {
-  font-family: var(--font-family);
-  background-color: var(--bg-color);
-  color: var(--text-primary);
-  line-height: 1.47059; /* Apple standard */
-  font-size: 17px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  letter-spacing: -0.022em;
-=======
 html {
   scroll-behavior: smooth;
 }
@@ -102,7 +56,6 @@ a {
   color: inherit;
   text-decoration: none;
   transition: var(--transition);
->>>>>>> 8085292 (redesigned inspired from kimi cli github page)
 }
 
 /* Animations */
@@ -112,19 +65,6 @@ a {
 }
 
 .fade-in {
-<<<<<<< HEAD
-  animation: fadeIn 1s ease-out forwards;
-}
-
-a {
-  color: var(--text-primary);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: var(--accent-color);
-=======
   animation: fadeIn 0.8s ease-out forwards;
 }
 
@@ -165,7 +105,6 @@ a:hover {
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
   mask-image: radial-gradient(ellipse at center, black, transparent 80%);
->>>>>>> 8085292 (redesigned inspired from kimi cli github page)
 }
 
 /* Navigation */
@@ -175,16 +114,6 @@ nav {
   left: 0;
   width: 100%;
   height: var(--nav-height);
-<<<<<<< HEAD
-  background: var(--bg-glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-=======
   background: rgba(10, 10, 15, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -192,42 +121,20 @@ nav {
   z-index: 1000;
   display: flex;
   justify-content: center;
->>>>>>> 8085292 (redesigned inspired from kimi cli github page)
 }
 
 .nav-content {
   width: 100%;
-<<<<<<< HEAD
-  max-width: 1000px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-=======
   max-width: var(--container-width);
   padding: 0 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
->>>>>>> 8085292 (redesigned inspired from kimi cli github page)
 }
 
 .nav-brand a {
   display: flex;
   align-items: center;
-<<<<<<< HEAD
-  gap: 10px;
-  color: var(--nav-text);
-  font-weight: 600;
-  font-size: 1.15rem;
-  letter-spacing: -0.015em;
-}
-
-.nav-brand img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-=======
   gap: 12px;
   font-weight: 700;
   font-size: 1.25rem;
@@ -238,54 +145,10 @@ nav {
 .nav-brand img {
   width: 28px;
   height: 28px;
->>>>>>> 8085292 (redesigned inspired from kimi cli github page)
 }
 
 .nav-links {
   display: flex;
-<<<<<<< HEAD
-  gap: 30px;
-}
-
-.nav-links a {
-  font-size: 13px;
-  font-weight: 400;
-  color: var(--nav-text);
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.nav-links a:hover {
-  opacity: 1;
-}
-
-/* Hero Section */
-.hero {
-  min-height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.hero h1 {
-  font-size: 56px;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  line-height: 1.07143;
-  margin-bottom: 6px;
-  color: var(--text-primary);
-}
-
-.hero p {
-  font-size: 1.7rem;
-  color: var(--text-secondary);
-  max-width: 800px;
-  margin-bottom: 30px;
-  font-weight: 500;
-=======
   gap: 32px;
   position: absolute;
   left: 50%;
@@ -389,132 +252,10 @@ nav {
   gap: 16px;
   flex-wrap: wrap;
   justify-content: center;
->>>>>>> 8085292 (redesigned inspired from kimi cli github page)
 }
 
 /* Buttons */
 .btn {
-<<<<<<< HEAD
-  display: inline-block;
-  background-color: var(--accent-color);
-  color: #fff;
-  padding: 12px 22px;
-  border-radius: 980px; /* Apple pill shape */
-  font-size: 17px;
-  font-weight: 400;
-  text-align: center;
-  transition: all 0.2s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: var(--accent-hover);
-  color: #fff;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: var(--accent-color);
-  border: none;
-  font-weight: 400;
-}
-
-.btn-secondary:hover {
-  background-color: transparent;
-  text-decoration: underline;
-  color: var(--accent-color);
-}
-
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: var(--section-padding);
-}
-
-/* Sections */
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 50px;
-  letter-spacing: -0.02em;
-}
-
-/* Footer */
-footer {
-  background-color: var(--bg-secondary);
-  padding: 64px 22px;
-  text-align: left; /* Apple footer is often left-aligned or column-based */
-  border-top: none;
-  color: var(--text-secondary);
-  font-size: 12px;
-}
-
-footer .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-footer p {
-  margin-bottom: 20px;
-  line-height: 1.33337;
-}
-
-footer a {
-  color: #424245;
-  margin: 0 10px 0 0;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Cards (for projects) */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.card {
-  background-color: var(--bg-secondary);
-  border-radius: 18px;
-  padding: 40px;
-  transition: all 0.3s ease;
-  border: none;
-  display: flex;
-  flex-direction: column;
-}
-
-.card:hover {
-  transform: scale(1.02);
-}
-
-.card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.card p {
-  color: var(--text-secondary);
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-  flex-grow: 1;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  object-fit: contain;
-  max-height: 200px;
-=======
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -548,44 +289,24 @@ footer a:hover {
   background: rgba(255, 255, 255, 0.05);
   border-color: white;
   box-shadow: none;
->>>>>>> 8085292 (redesigned inspired from kimi cli github page)
 }
 
 /* Forms */
 .form-group {
-<<<<<<< HEAD
-  margin-bottom: 20px;
-=======
   margin-bottom: 24px;
->>>>>>> 8085292 (redesigned inspired from kimi cli github page)
   text-align: left;
 }
 
 .form-group label {
   display: block;
   margin-bottom: 8px;
-<<<<<<< HEAD
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-=======
   font-size: 14px;
   font-weight: 500;
   color: var(--text-muted);
->>>>>>> 8085292 (redesigned inspired from kimi cli github page)
 }
 
 .form-control {
   width: 100%;
-<<<<<<< HEAD
-  padding: 18px;
-  background-color: #ffffff;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  color: var(--text-primary);
-  font-family: var(--font-family);
-  font-size: 17px;
-  transition: all 0.2s ease;
-=======
   padding: 12px 16px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-muted);
@@ -594,36 +315,10 @@ footer a:hover {
   font-family: var(--font-sans);
   font-size: 15px;
   transition: var(--transition);
->>>>>>> 8085292 (redesigned inspired from kimi cli github page)
 }
 
 .form-control:focus {
   outline: none;
-<<<<<<< HEAD
-  border-color: var(--accent-color);
-}
-
-/* Address Box */
-.address-box {
-  background-color: #f5f5f7;
-  padding: 14px 18px;
-  border-radius: var(--border-radius);
-  border: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.address-box code {
-  color: var(--text-primary);
-  font-family: "SF Mono", "SFMono-Regular", ui-monospace, monospace;
-  font-size: 14px;
-  word-break: break-all;
-}
-
-/* Mobile Menu Button */
-=======
   border-color: var(--accent-blue);
   background: rgba(255, 255, 255, 0.08);
 }
@@ -773,40 +468,10 @@ footer {
 }
 
 /* Mobile Adjustments */
->>>>>>> 8085292 (redesigned inspired from kimi cli github page)
 .mobile-menu-btn {
   display: none;
   background: none;
   border: none;
-<<<<<<< HEAD
-  color: var(--nav-text);
-  cursor: pointer;
-  padding: 5px;
-}
-
-/* Responsiveness */
-@media (max-width: 600px) {
-  .hero h1 { font-size: 2.5rem; }
-  .hero p { font-size: 1.1rem; }
-  
-  .mobile-menu-btn { display: block; }
-  
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: calc(var(--nav-height) + 1px);
-    left: 0;
-    width: 100%;
-    background: #1d1d1f; /* Opaque Dark Color */
-    flex-direction: column;
-    padding: 10px 20px 30px;
-    gap: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: 999;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-=======
   color: white;
   cursor: pointer;
   padding: 8px;
@@ -827,52 +492,10 @@ footer {
     border-bottom: 1px solid var(--border-muted);
     text-align: center;
     z-index: 1001;
->>>>>>> 8085292 (redesigned inspired from kimi cli github page)
   }
   
   .nav-links.active {
     display: flex;
-<<<<<<< HEAD
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .nav-links a {
-    color: var(--nav-text);
-    padding: 15px 0;
-    font-size: 17px;
-    font-weight: 400;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    width: 100%;
-    opacity: 0.8;
-  }
-
-  .nav-links a:last-child {
-    border-bottom: none;
-  }
-
-  .nav-links a:hover {
-    opacity: 1;
-    color: var(--accent-color);
-  }
-  
-  .grid { grid-template-columns: 1fr !important; gap: 30px !important; }
-  
-  .container { padding: 60px 20px; }
-  
-  /* Fix sticky sidebar in docs.html for mobile */
-  aside {
-    position: static !important;
-    margin-bottom: 30px;
-    width: 100% !important;
-    min-width: unset !important;
-  }
-  
-  /* Flex wrap fix for docs.html */
-  div[style*="display: flex; gap: 40px;"] {
-    flex-direction: column;
-    gap: 20px !important;
-=======
   }
   
   .mobile-menu-btn {
@@ -890,6 +513,5 @@ footer {
   .footer-links {
     gap: 32px;
     flex-wrap: wrap;
->>>>>>> 8085292 (redesigned inspired from kimi cli github page)
   }
 }
