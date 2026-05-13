@@ -119,4 +119,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Terminal Typing Effect
+  const badge = document.querySelector('.hero-content .badge');
+  if (badge) {
+    const textNode = badge.childNodes[badge.childNodes.length - 1];
+    const originalText = textNode.textContent.trim();
+    textNode.textContent = '';
+    
+    let i = 0;
+    const type = () => {
+      if (i < originalText.length) {
+        textNode.textContent += originalText.charAt(i);
+        i++;
+        setTimeout(type, 50 + Math.random() * 50);
+      }
+    };
+    setTimeout(type, 1000);
+  }
+
+  // Bento Glow Tracking
+  const bentoItems = document.querySelectorAll('.bento-item');
+  bentoItems.forEach(item => {
+    item.addEventListener('mousemove', (e) => {
+      const rect = item.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      item.style.setProperty('--mouse-x', `${x}px`);
+      item.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
 });
