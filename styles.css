@@ -314,6 +314,11 @@ nav.scrolled {
 }
 
 
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
 .nav-links a {
   font-size: 0.75rem;
   font-weight: 400;
