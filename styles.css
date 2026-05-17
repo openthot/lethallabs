@@ -13,6 +13,8 @@
   --brand-primary: #0066cc; /* Technical Blue */
   --brand-light: #2997ff;
   --brand-glow: rgba(0, 102, 204, 0.1);
+  --accent-cyan: var(--brand-primary);
+  --accent-glow-cyan: var(--brand-glow);
   
   --border-subtle: #d2d2d7;
   --glass-bg: rgba(255, 255, 255, 0.85);
@@ -489,6 +491,41 @@ nav.scrolled {
 .bento-item p {
   font-size: 0.9375rem;
   line-height: 1.5;
+}
+
+/* Feature Cards */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.feature-card {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: var(--shadow-premium);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
 }
 
 /* Sections */

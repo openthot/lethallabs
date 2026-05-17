@@ -15,11 +15,32 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      gap: 24px;
       margin-bottom: 16px;
+    }
+    .projects-section {
+      padding-top: 40px;
+    }
+    .projects-block {
+      margin-bottom: 72px;
+    }
+    .projects-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+    }
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 260px;
+      text-align: left;
+    }
+    .project-card p {
+      margin-bottom: 28px;
     }
     .project-links {
       display: flex;
+      flex-wrap: wrap;
       gap: 16px;
+      margin-top: auto;
     }
     .project-link {
       font-size: 13px;
@@ -34,6 +55,7 @@
       opacity: 0.8;
     }
     .status-badge {
+      flex: 0 0 auto;
       font-size: 11px;
       font-weight: 700;
       padding: 2px 8px;
@@ -48,6 +70,24 @@
     .status-dev {
       background-color: var(--bg-secondary);
       color: var(--text-tertiary);
+    }
+    .roadmap-note {
+      max-width: 760px;
+      margin-bottom: 100px;
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+    @media (max-width: 640px) {
+      .project-header {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .project-card {
+        min-height: auto;
+      }
+      .projects-block {
+        margin-bottom: 56px;
+      }
     }
   </style>
 </head>
@@ -93,12 +133,12 @@
       </div>
     </section>
 
-    <section class="container">
+    <section class="container projects-section">
       
       <div class="section-label" style="text-align: left;">Featured Projects</div>
       
-      <div class="features-grid" style="margin-bottom: 80px;">
-        <div class="feature-card" style="text-align: left;">
+      <div class="features-grid projects-grid projects-block">
+        <div class="feature-card project-card">
           <div class="project-header">
             <h3 style="font-size: 1.3rem;">Miroko</h3>
             <span class="status-badge status-active">Live</span>
@@ -129,8 +169,8 @@
       </div>
 
       <div class="section-label" style="text-align: left;">In Development</div>
-      <div class="features-grid" style="margin-bottom: 80px;">
-        <div class="feature-card" style="text-align: left; opacity: 0.7;">
+      <div class="features-grid projects-grid projects-block">
+        <div class="feature-card project-card" style="opacity: 0.7;">
           <div class="project-header">
             <h3>Standardizing Studio Primitives...</h3>
             <span class="status-badge status-dev">In Progress</span>
@@ -140,9 +180,7 @@
       </div>
 
       <div class="section-label" style="text-align: left;">Studio Roadmap</div>
-      <div style="margin-bottom: 100px;">
-        <p style="color: var(--text-secondary); font-size: 1.1rem;">New client projects and experimental prototypes will be announced here as they enter active development.</p>
-      </div>
+      <p class="roadmap-note">New client projects and experimental prototypes will be announced here as they enter active development.</p>
 
     </section>
   </main>
